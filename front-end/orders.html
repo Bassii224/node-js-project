@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <title>Home - PhotoClick</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1>PhotoClick</h1>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./orders.html">Home</a></li>
+          <li><a href="./gallery.html">Gallery</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./faq.html">FAQ</a></li>
+          <li><a href="./index.html">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section id="home" class="section">
+      <div class="container">
+        <h2>Home</h2>
+        <ul class="home-tabs">
+          <li><a href="#" onclick="showNewOrderForm()">Create New Order</a></li>
+        </ul>
+        <div class="new-order-form" id="newOrderForm">
+          <h3>Create New Order</h3>
+          <form action="/submit_order/add-new" method="POST">
+            <label for="orderType">Order Type:</label>
+            <select id="orderType" name="orderType" required>
+              <option value="Wedding Party">Wedding Party</option>
+              <option value="Henna Party">Henna Party</option>
+              <option value="Save The Date">Save The Date</option>
+              <option value="Bar Mitzvah Party">Bar Mitzvah Party</option>
+              <option value="Bat Mitzvah Party">Bat Mitzvah Party</option>
+              <option value="Birth Daughter Party">Birth Daughter Party</option>
+              <option value="Birth Son Party">Birth Son Party</option>
+            </select>
+
+            <label for="orderPack">Order Pack:</label>
+            <select
+              name="orderPack"
+              id="orderPack"
+              onchange="updateDescription()"
+              required
+            >
+              <option value="Bronze Simply">Bronze Simply</option>
+              <option value="Silver Plus">Silver Plus</option>
+              <option value="Gold Premium">Gold Premium</option>
+            </select>
+            <p id="orderPackDescription" class="description"></p>
+
+            <label for="pricePack">Price Pack:</label>
+            <input type="text" name="pricePack" id="pricePack" readonly />
+
+            <label for="location">Location:</label>
+            <select
+              id="location"
+              name="location"
+              onchange="updateLocationDetails()"
+            >
+              <option value="Chatto">Chatto</option>
+              <option value="Kala">Kala</option>
+              <option value="Sandrine">Sandrine</option>
+              <option value="Odeon">Odeon</option>
+              <option value="Kai">Kai</option>
+              <option value="Troya">Troya</option>
+              <option value="Adora">Adora</option>
+              <option value="Narnia">Narnia</option>
+              <option value="Tao">Tao</option>
+            </select>
+            <p id="locationDetails" class="centered" style="display: none">
+              Area: <span id="locationArea"></span>, City:
+              <span id="locationCity"></span>.
+            </p>
+
+            <label for="dateOfEvent">Date of Event:</label>
+            <input type="date" name="dateOfEvent" id="dateOfEvent" required />
+
+            <label for="hourOfEvent">Hour of Event:</label>
+            <input type="time" name="hourOfEvent" id="hourOfEvent" required />
+            <input type="submit" value="Submit Order" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p class="copyright">&copy; All rights reserved to PhotoClick.</p>
+      </div>
+    </footer>
+
+    <script src="./js/orders.js" defer></script>
+  </body>
+</html>

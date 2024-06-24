@@ -1,0 +1,183 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../img/background-cover-photo.jpg");
+  background-position: center;
+  background-size: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+  /* background-color: lightgray; */
+  color: black;
+  padding: 10px 0;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 600px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add horizontal centering */
+}
+
+.nav-links li {
+  margin-right: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+  align-items: center;
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-links a:hover {
+  color: #ccd0d5;
+  align-items: center;
+  text-align: center;
+}
+
+/* Tab styles */
+.tab {
+  display: none;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  align-items: center;
+  position: fixed;
+  font-size: smaller;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  align-items: center;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+h2 {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-size: medium;
+  text-align: left;
+  align-items: left;
+  color: black;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
+  text-align: left;
+  align-items: center;
+}
+
+h4 {
+  text-align: left;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* CSS for the gallery images */
+#gallery {
+  padding: 0;
+}
+
+#gallery ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#gallery li {
+  width: calc(35.33% - 15px); /* Calculate width for each image container */
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+#gallery li:hover {
+  transform: scale(1.05); /* Add hover effect */
+}
+
+#gallery li img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  border: 2px solid #fff; /* Add border around images */
+  border-radius: 8px; /* Add rounded corners to images */
+}
+
+.copyright {
+  text-align: center;
+}
+
+h6 {
+  font-size: medium;
+  text-align: center;
+  align-items: center;
+  color: black;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

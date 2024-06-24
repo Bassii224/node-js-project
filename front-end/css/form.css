@@ -1,0 +1,98 @@
+/* Additional CSS styles for the new order form */
+.new-order-form {
+  display: none;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.new-order-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.new-order-form input[type="text"],
+.new-order-form input[type="date"],
+.new-order-form input[type="time"],
+.new-order-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.new-order-form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-order-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#orderPackDescription {
+  font-size: 0.8rem;
+  color: brown;
+  text-align: center;
+}
+
+#locationArea,
+#locationCity {
+  font-size: 0.8rem;
+  color: brown;
+  text-align: center;
+}
+
+/* p {
+  font-size: 0.8rem;
+  color: brown;
+  text-align: center;
+} */
+
+/* Style for order pack description */
+#orderPackDescription {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: brown;
+  font-weight: bold;
+}
+
+/* Style for price pack */
+#pricePack {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #008000; /* Green color for price */
+  text-align: center;
+  align-items: center;
+}
+
+/* Style for location details */
+#locationArea,
+#locationCity {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  color: brown;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Style for centered elements */
+.centered {
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  color: brown;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Sign Up - PhotoClick</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>PhotoClick</h2>
+      <form id="signupForm" onsubmit="signUpUser(event)">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+          title="Password must contain at least 8 characters, one uppercase letter, one number, and one special symbol"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          pattern="[0-9]{10}"
+          title="Please enter a valid 10-digit phone number"
+          required
+        />
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First Name"
+          pattern="[A-Za-z]+(?: [A-Za-z]+)*[A-Za-z]"
+          title="Please enter only letters for the first name, and it must end with a letter."
+          required
+        />
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Last Name"
+          pattern="[A-Za-z]+(?: [A-Za-z]+)*[A-Za-z]"
+          title="Please enter only letters for the last name, and it must end with a letter."
+          required
+        />
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Street Address, City, Country, Zip Code."
+          required
+        />
+        <select id="userType" name="userType" required>
+          <option value="" disabled selected>Select User Type</option>
+          <option value="photographer">Photographer</option>
+          <option value="customer">Customer</option>
+        </select>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div id="signUpMessage"></div>
+      <a href="index.html" class="signup-link"
+        >Already have an account? Sign In</a
+      >
+    </div>
+    <script src="./js/signup.js"></script>
+  </body>
+</html>
